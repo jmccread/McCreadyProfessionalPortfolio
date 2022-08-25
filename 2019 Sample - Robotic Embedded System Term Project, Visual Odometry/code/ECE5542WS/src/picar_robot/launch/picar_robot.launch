@@ -1,0 +1,5 @@
+<launch>
+	<include file="$(find picar_2)/picar_2.launch"/>
+	<include file="$(find usb_cam)/launch/usb_cam.launch"/>
+	<include file="$(find ros_sensehat)/sensehat_imu.launch"/>
+</launch>

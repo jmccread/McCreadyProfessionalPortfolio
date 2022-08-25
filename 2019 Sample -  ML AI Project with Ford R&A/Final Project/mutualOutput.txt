@@ -1,0 +1,32 @@
+Feature ranked 1 is (CVC Control Error Angle Estimate) with value 0.017848
+Feature ranked 2 is (Average Assist Torque Long Term) with value 0.017256
+Feature ranked 3 is (CVC Filtered Offset Angle ) with value 0.016050
+Feature ranked 4 is (Vehicle Speed Condition) with value 0.007359
+Feature ranked 5 is (Average Assist Torque Short Term) with value 0.007043
+Feature ranked 6 is (Steering Column Torque) with value 0.001541
+Feature ranked 7 is (Pull Drift Compensation Weighted Torque) with value 0.000866
+Feature ranked 8 is (Rear Wheel Left Right Difference) with value 0.000860
+Feature ranked 9 is (Vehicle Yaw Rate Compensated) with value 0.000741
+Feature ranked 10 is (Lateral Acceleration Condition) with value 0.000598
+Feature ranked 11 is (Vehicle Yaw Rate) with value 0.000552
+Feature ranked 12 is (Steering Wheel Angle Condition) with value 0.000380
+Feature ranked 13 is (Vehicle Longitudinal Acceleration Compensated) with value 0.000269
+Feature ranked 14 is (Compensated Steering Wheel Angle) with value 0.000251
+Feature ranked 15 is (Front Left Wheel Speed) with value 0.000234
+Feature ranked 16 is (Rear Right Wheel Speed) with value 0.000233
+Feature ranked 17 is (Vehicle Speed (Engine or Brakes)) with value 0.000233
+Feature ranked 18 is (Front Right Wheel Speed) with value 0.000231
+Feature ranked 19 is (Rear Left Wheel Speed) with value 0.000225
+Feature ranked 20 is (Vehicle Roll Rate) with value 0.000145
+Feature ranked 21 is (Curvature Condition) with value 0.000139
+Feature ranked 22 is (Average Assist During Accelerating) with value 0.000117
+Feature ranked 23 is (Roll Angle Estimate) with value 0.000105
+Feature ranked 24 is (Average Assist During Decelerating) with value 0.000089
+Feature ranked 25 is (Vehicle Vertical Acceleration) with value 0.000086
+Feature ranked 26 is (Vehicle Lateral Acceleration  Compensated) with value 0.000086
+Feature ranked 27 is (Vehicle Longitudinal Acceleration ) with value 0.000045
+Feature ranked 28 is (Front Wheel Left Right Difference) with value 0.000012
+Feature ranked 29 is (Steering Control Module Current) with value 0.000009
+Feature ranked 30 is (Accelerator Pedal Position Percent Rate) with value 0.000004
+Feature ranked 31 is (Vehicle Lateral Acceleration) with value 0.000002
+Feature ranked 32 is (Total Brake Torque) with value 0.000000

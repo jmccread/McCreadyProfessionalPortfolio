@@ -1,0 +1,20 @@
+<robot name="picar_robot">
+	<link name="body_link" />
+	<link name="imu_link"/>
+	<link name="tilt_link" />
+	<link name="pan_link" />
+	<link name="cam_link" />
+	
+	<joint name="tilt_joint" type="continuous"/>
+		<parent link="body_link" />
+		<child link="tilt_link"/>
+	</joint>
+	
+	<joint name="pan_joint" type="continuous"/>
+		<parent link="tilt_link" />
+		<child link="pan_link"/>
+	</joint>
+	
+
+</robot>	
+	

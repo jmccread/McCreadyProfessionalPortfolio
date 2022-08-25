@@ -1,0 +1,15 @@
+Feature ranked 1 is (Long Term Lower Threshold) with value 0.422340
+Feature ranked 2 is (Short Term Upper Threshold) with value 0.318799
+Feature ranked 3 is (Long Term Upper Threshold) with value 0.318799
+Feature ranked 4 is (Tire Pressure Warning?) with value 0.137188
+Feature ranked 5 is (Short Term Lower Threshold) with value 0.068148
+Feature ranked 6 is (Angle Error Fault) with value 0.016632
+Feature ranked 7 is (Acceleration Torque Fault) with value 0.012973
+Feature ranked 8 is (Deceleration Torque Fault) with value 0.005250
+Feature ranked 9 is (Brake Light On ) with value 0.000471
+Feature ranked 10 is (Traction Control System Percentage Activation) with value 0.000042
+Feature ranked 11 is (Traction Control System Condition) with value 0.000042
+Feature ranked 12 is (ABS Condition) with value 0.000010
+Feature ranked 13 is (ABS Active ) with value 0.000010
+Feature ranked 14 is (Stability Control Brake Activation) with value 0.000005
+Feature ranked 15 is (Electronic Stability Control Condition) with value 0.000005

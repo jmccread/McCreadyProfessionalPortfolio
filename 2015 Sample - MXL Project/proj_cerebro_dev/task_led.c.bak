@@ -1,0 +1,64 @@
+/******************************************
+ *  ____    ____   ____  ____   _____     *	
+ * |_   \  /   _| |_  _||_  _| |_   _|    *
+ *   |   \/   |     \ \  / /     | |      *
+ *   | |\  /| |      > `' <      | |   _  *
+ *  _| |_\/_| |_   _/ /'`\ \_   _| |__/ | *	
+ * |_____||_____| |____||____| |________| *	
+ *                                        *	
+ ******************************************/
+ 
+/**
+ * author: 	Joshua McCready 
+ * email:	jmccread@umich.edu
+ * date:	07/23/2014
+ */
+
+/******************************************************************************
+*                                                                           
+* task_led()
+* Simple task that flashes the LED (when present).
+*
+******************************************************************************/
+
+/******************************************************************************
+* Includes 
+******************************************************************************/
+#include "config.h"
+#include "init.h"
+#include "task_led.h"
+#include "main.h"
+#include "csk_led.h"
+#include "salvo.h"
+
+
+/*
+// Encoder Interrupt Pins 
+#define ENCODER1_DIR          P2DIR
+#define ENCODER1_SEL          P2SEL
+#define ENCODER1_OUT          P2OUT
+#define PIN_ENCODER1          BIT0
+
+#define ENCODER2_DIR          P1DIR
+#define ENCODER2_SEL          P1SEL
+#define ENCODER2_OUT          P1OUT
+#define PIN_ENCODER2          BIT7*/
+
+void task_led(void) {
+  csk_led_status_open(PIN_LED);  
+  ENCODER1_SEL &= ~PIN_ENCODER1;
+  ENCODER1_DIR |= PIN_ENCODER1;
+  ENCODER2_SEL &= ~PIN_ENCODER2;
+  ENCODER2_DIR |= PIN_ENCODER2;
+  while (1) { 
+    // Flash LED -- on time is 1/10 the off time.
+    ENCODER1_OUT |= PIN_ENCODER1;
+    ENCODER2_OUT |= PIN_ENCODER2;
+    csk_led_status_off(PIN_LED);
+    OS_Delay(TASK_LED_DELAY);
+    csk_led_status_on(PIN_LED);
+    OS_Delay(TASK_LED_DELAY);    
+  } /* while */
+} /* task_led() */
+
+

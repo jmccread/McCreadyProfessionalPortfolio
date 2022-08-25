@@ -1,0 +1,17 @@
+digraph G {
+node [shape=box];
+"body_link" [label="body_link"];
+"imu_link" [label="imu_link"];
+"pan_link" [label="pan_link"];
+"tilt_link" [label="tilt_link"];
+"cam_link" [label="cam_link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"body_link" -> "imu_joint" [label="xyz: -0.0127 0 0.0254 \nrpy: 3.14 -0 0"]
+"imu_joint" -> "imu_link"
+"body_link" -> "pan_joint" [label="xyz: 0 0.1016 0 \nrpy: 0 -0 0"]
+"pan_joint" -> "pan_link"
+"pan_link" -> "tilt_joint" [label="xyz: -0.0254 0.00635 0.0381 \nrpy: -1.57 0 0"]
+"tilt_joint" -> "tilt_link"
+"tilt_link" -> "cam_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"cam_joint" -> "cam_link"
+}

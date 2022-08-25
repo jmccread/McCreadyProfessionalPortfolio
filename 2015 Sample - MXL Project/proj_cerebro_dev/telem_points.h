@@ -1,0 +1,142 @@
+/******************************************
+ *  ____    ____   ____  ____   _____     *	
+ * |_   \  /   _| |_  _||_  _| |_   _|    *
+ *   |   \/   |     \ \  / /     | |      *
+ *   | |\  /| |      > `' <      | |   _  *
+ *  _| |_\/_| |_   _/ /'`\ \_   _| |__/ | *	
+ * |_____||_____| |____||____| |________| *	
+ *                                        *	
+ ******************************************/
+ 
+/**
+ * author: 	Joshua McCready 
+ * email:	jmccread@umich.edu
+ * date:	07/23/2014
+ */
+
+ /************************************************************ 
+*
+* telem_points.h 
+* Contains needed definitions for global data structure which
+* collects telempoints from various tasks
+*
+************************************************************/
+
+#ifndef __telem_points_h
+#define __telem_points_h
+#include "main.h"
+
+// Global data capture struct
+#define size_data_str      512 
+#define size_photo_V       15
+#define size_adc_temp      5
+#define size_mtr_telem     3
+
+// Struct to add telemetry points from EPS, BMP, etc. 
+typedef struct {
+  uint32_t      tick_counter;                      // counts the total number of ticks of the system timer
+  uint32_t      last_tick;                        // Used for updating time
+  uint16_t      ms_counter;                       // Count of TA0 triggers up to 6000 for delay function
+  char          data_str[size_data_str];          // String to be printed to SD card
+  char          nmea_str[512];
+  // BMP180 measurements 
+  short         bmp_temp;                             // Temperature in units of 0.1 deg C
+  long          bmp_pressure;                         // Pressure given in Pascals
+  
+  // l3g4200d measurements 
+  float       gyro_dps[3];                      // Easy to send over UART with UART.h
+  int16_t         gyro_temp;                        // On Chip temp of the Gyro
+  
+  // adxl345 measurements   
+  float       acc_g[3];                            // Easier to send over UART
+                                                   // Measured in Gravities (1 g = 9.81 N)
+
+
+  /******************************************************************************
+  * 5 peripheral sensor board hmc5883 measurements in Gauss
+  *
+  * 0 mag_1_x 
+  * 1 mag_1_y 
+  * 2 mag_1_z
+  * ... 
+  * 12 mag_5_x
+  * 13 mag_5_y
+  * 14 mag_4_z
+  *
+  ******************************************************************************/
+  float       mag_g[15]; 
+
+  /******************************************************************************
+  * 5 peripheral sensor board and motor board  adc measurements:
+  *
+  * 0 photo_1_A; 
+  * 1 photo_1_B; 
+  * 2 photo_1_C;
+  *
+  * 3 photo_2_A; 
+  * 4 photo_2_B; 
+  * 5 photo_2_C;
+  *
+  * 6 photo_3_A; 
+  * 7 photo_3_B; 
+  * 8 photo_3_C;
+  *
+  * 9 photo_4_A; 
+  * 10 photo_4_B;
+  * 11 photo_4_C;
+  *
+  * 12 photo_5_A; 
+  * 13 photo_5_B;
+  * 14 photo_5_C;
+  *
+  * 15 adc_temp_1;
+  * 16 adc_temp_2;
+  * 17 adc_temp_3;
+  * 18 adc_temp_4;
+  * 19 adc_temp_5; 
+
+  * 20 mtr_i; 
+  * 21 mtr_batt;
+  * 22 mtr_temp;
+  *
+  ******************************************************************************/ 
+  float          photo_V[size_photo_V]; 
+  float          adc_temp[size_adc_temp];
+  float          mtr_telem[size_mtr_telem];
+  uint8_t        heater_on;
+  uint8_t        BW_on;
+  /******************************************************************************
+  * Data obtained from GPS
+  ******************************************************************************/ 
+  float          lon;
+  float          lat;
+  float          alt;
+  uint8_t        hours;
+  uint8_t        mins;
+  float          secs;
+  uint8_t        fix_status; 
+
+  /******************************************************************************
+  * Data derived from GPS and 32.7168 kHz crystal, reference point for
+  * measurements which might occur at different times 
+  ******************************************************************************/ 
+  uint8_t h_HF;     // Hours for high frequency measurement
+  uint8_t m_HF;     // Minutes " " 
+  float s_HF;       // Accurate second count from high frequency measurements 
+  float HF_t_elap; 
+  uint8_t new_gps_HF;
+
+  uint8_t h_LF;     // Hours for high frequency measurement
+  uint8_t m_LF;     // Minutes " " 
+  float s_LF;       // Accurate second count from high frequency measurements 
+  float LF_t_elap;
+  uint8_t new_gps_LF;
+
+  uint8_t h_COM;     // Hours for serial timeout 
+  uint8_t m_COM;     // Minutes " " 
+  float s_COM;       // Accurate second count from serial timeout
+  float COM_t_elap; 
+  uint8_t new_gps_COM;
+  } data_struct; 
+
+ #endif 

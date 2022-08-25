@@ -1,0 +1,382 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"rbf",
+				"rbf_model"
+			],
+			[
+				"pca",
+				"pca_2d"
+			],
+			[
+				"gamm",
+				"gamma_range"
+			],
+			[
+				"gri",
+				"grid_param_1"
+			],
+			[
+				"grid",
+				"grid_param_2"
+			],
+			[
+				"cv",
+				"cv_results_"
+			],
+			[
+				"para",
+				"parameters"
+			],
+			[
+				"file",
+				"file_name"
+			],
+			[
+				"line",
+				"linear_clf_model"
+			],
+			[
+				"linear",
+				"linear_grid_clf"
+			],
+			[
+				"for",
+				"format"
+			],
+			[
+				"wei",
+				"weights_name"
+			],
+			[
+				"acc",
+				"accuracy"
+			],
+			[
+				"model_",
+				"model_ResNet18"
+			],
+			[
+				"y",
+				"y_test"
+			],
+			[
+				"cos",
+				"cross_val_score"
+			],
+			[
+				"GR",
+				"GRAZ_cars"
+			],
+			[
+				"Ma",
+				"MaxPooling1D"
+			],
+			[
+				"load_t",
+				"load_data_elapsed"
+			],
+			[
+				"lo",
+				"load_data_start"
+			],
+			[
+				"as",
+				"asarray"
+			],
+			[
+				"train",
+				"train_data"
+			],
+			[
+				"tr",
+				"train_data"
+			],
+			[
+				"VO",
+				"VOC2007_JPEG_PATH"
+			],
+			[
+				"dim",
+				"dim_y"
+			],
+			[
+				"vali",
+				"validation_generator"
+			],
+			[
+				"lst",
+				"lstVal"
+			],
+			[
+				"la",
+				"label"
+			],
+			[
+				"tra",
+				"training"
+			],
+			[
+				"class",
+				"classifier"
+			],
+			[
+				"ped",
+				"peds_train"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 137.0,
+		"last_filter": "Package Control: remo",
+		"selected_items":
+		[
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 412.0
+	},
+	"console":
+	{
+		"height": 130.0,
+		"history":
+		[
+			"install Package"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Mostafa Shuva/Documents/GitHub/ECE588/findEdges.m",
+		"/C/Users/Mostafa Shuva/Documents/GitHub/ECE588/Demo_1/proj.m",
+		"/C/Users/Mostafa Shuva/Documents/GitHub/ECE588/proj.m",
+		"/C/Users/Mostafa Shuva/Documents/GitHub/ECE588/fineEdges.m",
+		"/C/Users/Mostafa Shuva/Desktop/lol.txt",
+		"/C/Users/Mostafa Shuva/Desktop/MATLAB R2016b/MATLAB R2016b/Installation instructions.txt",
+		"/C/Users/Mostafa Shuva/Desktop/MATLAB R2016b/MATLAB R2016b/crack/Installation instructions.txt",
+		"/F/UM Dearborn/Fall 2018/ECE 500/Homework 1/hw1.m",
+		"/F/UM Dearborn/Summer 2018/ECE 5831/Exam 2/starter.m",
+		"/F/UM Dearborn/Summer 2018/ECE 5831/Project/Code/logistic_classifier.m",
+		"/C/Users/Mostafa Shuva/Desktop/MATLAB R2017a/Readme.txt",
+		"/C/Users/Mostafa Shuva/Downloads/prob1.m",
+		"/F/UM Dearborn/Summer 2018/ECE 5831/Project/Code/elasticnet_classifier.m",
+		"/F/UM Dearborn/Summer 2018/ECE 5831/Exam 2/L7_7.m",
+		"/C/Users/Mostafa Shuva/Downloads/10.1007%2F978-981-10-7386-1_58.bib",
+		"/F/UM Dearborn/Summer 2018/ECE 5831/Project/EWT/Tests/1D/disp_hhs2.m",
+		"/F/UM Dearborn/Summer 2018/ECE 5831/Project/EWT/Tests/1D/Test_EWT1D.m",
+		"/F/UM Dearborn/Summer 2018/ECE 5831/Project/EWT/Utilities/1D/Show_EWT.m",
+		"/F/UM Dearborn/Summer 2018/ECE 5831/Project/EWT/1D/EWT1D.m",
+		"/F/UM Dearborn/Summer 2018/ECE 5831/Project/EWT/README.txt",
+		"/F/UM Dearborn/Summer 2018/ECE 5831/Project/EWT/Boundaries/EWT_Boundaries_Detect.m",
+		"/F/UM Dearborn/Summer 2018/ECE 5831/Project/EWT/Tests/1D/Disp_HHT.m",
+		"/F/UM Dearborn/Summer 2018/ECE 5831/Exam 1/prob1.m",
+		"/F/UM Dearborn/Summer 2018/ECE 5831/Exam 1/L3_3.m",
+		"/F/UM Dearborn/Summer 2018/ECE 5831/Exam 1/L5_2.m",
+		"/C/Users/Mostafa Shuva/Desktop/arch-linux-install.txt",
+		"/G/Documents/AA-5_1_18.txt",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/svm_voc.py",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/data_anal.py",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/predict.py",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/README.md",
+		"/G/Documents/AA-4_5_18.txt",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/logs/cnn_log.txt",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/logs/svm_log",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/logs/svm_linear_log.txt",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/bbox/bbox.py",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/bbox/ContourCrop.py",
+		"/C/Users/Mostafa Shuva/.keras/keras.json",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/albs_code.py",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/cnn_voc.py",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/voc2012_eval.py",
+		"/C/Users/Mostafa Shuva/Desktop/svm_demo.py",
+		"/C/Users/Mostafa Shuva/AppData/Roaming/Sublime Text 3/Packages/Conda/conda.sublime-settings",
+		"/C/Users/Mostafa Shuva/AppData/Roaming/Sublime Text 3/Packages/User/conda.sublime-settings",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/getCSV.py",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/datasets/VOC2012/ImageSets/Main/test.txt",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/datasets/VOC2012/ImageSets/Main/tvmonitor_test.txt",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/SVM_20-Mar-18_Training/svm_voc_log20-Mar-18.txt",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/SVM_shuffle_training/svm_shuffle.txt",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/SVM_20-Mar-18_Training/svm_voc.py",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/cnn_hog_voc.py",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/resnet.py",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/64bit_log.txt",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/CNN_21-Mar-18_Training/2018-03-21voc2007_model_history",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/svm_helper.py",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/helper.py",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/svm_demo.py",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/load_graz.py",
+		"/C/Users/Mostafa Shuva/Desktop/cnn_demo.py",
+		"/C/Users/Mostafa Shuva/Desktop/svm_shuffle.txt",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/load_graz.p",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/sample_cnn/cnn.py",
+		"/F/UMD/ECE 579/object-detection-cnn/backup/feb28/cnn_voc.py",
+		"/F/UMD/ECE 579/object-detection-cnn/backup/mar1/helper.py",
+		"/F/UMD/ECE 579/object-detection-cnn/backup/mar1/cnn_voc.py",
+		"/F/UMD/ECE 579/object-detection-cnn/backup/mar2/helper.py",
+		"/F/UMD/ECE 579/object-detection-cnn/backup/mar2/cnn_voc.py",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/bbox.py",
+		"/C/Users/Mostafa Shuva/Desktop/iris_demo.py",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/datasets/VOC2007/ImageSets/Main/train.txt",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/cnn.py",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/datasets/VOC2007/ImageSets/Main/aeroplane_trainval.txt",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/trainData.csv",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/datasets/VOC2007/ImageSets/Main/aeroplane_train.txt",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/valData.csv",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/datasets/VOC2007/Annotations/000005.xml",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/datasets/VOC2007/VOCdevkit/VOCcode/PASreadrecord.m",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/datasets/VOC2007/ImageSets/Layout/train.txt",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/papers/references.bib",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/model_architecture.json",
+		"/C/Users/Mostafa Shuva/Desktop/mnist_mlp.py",
+		"/C/Users/Mostafa Shuva/Desktop/tf_gpu.py",
+		"/C/Users/Mostafa Shuva/Desktop/object-detection-cnn/datasets/gtsrb/readTrafficSigns.py",
+		"/C/Users/Mostafa Shuva/AppData/Local/Temp/Temp1_GTSRB_Python_code.zip/Python code for GTSRB/readTrafficSigns.py",
+		"/C/Users/Mostafa Shuva/Downloads/README"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Conda/Conda.sublime-build",
+	"project": "trial.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

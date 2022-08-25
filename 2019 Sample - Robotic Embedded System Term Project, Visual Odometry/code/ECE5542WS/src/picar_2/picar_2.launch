@@ -1,0 +1,6 @@
+ <launch>
+	<node pkg="picar_2" type="n64_cmd_follower.py" name="follower_node"/>
+	<node pkg="picar_2" type="n64_cmd_follower_2.py" name="follower_2_node"/>
+	<node pkg="picar_2" type="n64_cmd_follower_3.py" name="follower_3_node"/>
+	<param name="enable_tilt_chatter" value="0" />
+</launch>

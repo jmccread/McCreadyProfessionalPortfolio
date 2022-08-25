@@ -1,0 +1,186 @@
+/******************************************
+ *  ____    ____   ____  ____   _____     *	
+ * |_   \  /   _| |_  _||_  _| |_   _|    *
+ *   |   \/   |     \ \  / /     | |      *
+ *   | |\  /| |      > `' <      | |   _  *
+ *  _| |_\/_| |_   _/ /'`\ \_   _| |__/ | *	
+ * |_____||_____| |____||____| |________| *	
+ *                                        *	
+ ******************************************/
+ 
+/**
+ * author: 	Joshua McCready 
+ * email:	jmccread@umich.edu
+ * date:	07/23/2014
+ */
+
+/*************************************************************************************
+ * int main():
+ * 
+ * Overview:        
+ *                  
+ *
+ * Note:            
+*************************************************************************************/
+#include "main.h"
+#define MAG_ON  13
+// Globals shared between tasks
+char STR_FILE_NAME[30];  
+data_struct data;
+error_struct e; 
+int main(void) {
+  OSInit(); 
+  init();                        
+  
+  // Create tasks.
+
+  // Tasks running on a fixed timer (wait on respective binary semaphors in TA):
+  OSCreateTask(task_check_error,        TASK_CHECK_ERROR_P,     2);
+  OSCreateTask(task_measure_low_f,      TASK_MEASURE_LOW_F_P,   4); 
+  OSCreateTask(task_log_low_f,          TASK_LOG_LOW_F_P,       3);
+  OSCreateTask(task_log_high_f,         TASK_LOG_HIGH_F_P,      3);
+  OSCreateTask(task_heater_control,     TASK_HEATER_CONTROL_P,  5);
+
+  // Yielded Tasks
+  //OSCreateTask(task_stamp_comm,         TASK_STAMP_COMM_P,      5);
+  OSCreateTask(task_measure_high_f,     TASK_MEASURE_HIGH_F_P,  6);
+  //OSCreateTask(task_develop,            TASK_DEVELOP_P,         8);
+
+  // Delayed Tasks
+  OSCreateTask(task_led,                TASK_LED_P,             1);
+
+
+  // Create Binary semaphors to collect data as needed and signal transmission and
+  // Logging functionalities, all initially unavailable
+  OSCreateBinSem(COLLECT_LOW_F_P, 0);
+  OSCreateBinSem(LOG_LOW_F_P, 0);
+  OSCreateBinSem(NEW_LOW_F_P, 0);
+  OSCreateBinSem(LOG_HIGH_F_P, 0);
+  OSCreateBinSem(NEW_HIGH_F_P, 0);
+  OSCreateBinSem(CHECK_ERROR_P, 0);
+  OSCreateBinSem(RSRC_SD_CARD_P, 0);
+  OSCreateBinSem(TEMP_CHECK_P, 0);
+
+  // Enable interrupts, delay for whatever
+  __enable_interrupt();
+  delay_ms(30);
+  
+  // Multitask.                                                                                                
+  while (1) {
+    OSSched();
+    } /* while */
+}/* main() */
+
+uint8_t check_e()
+{
+   e.broke = e.gyro || e.acc || e.adc || e.mag || e.iso || e.ltc || e.pca || e.tca || e.bmp || e.i2c || e.MEMLEAK; 
+   if (e.broke)
+   {
+    OSSignalBinSem(CHECK_ERROR_P); 
+    return 0;
+   }
+   else
+    return 1; 
+}
+
+
+uint8_t check_sd_e()
+{
+   if (e.f_open | e.f_close | e.f_write)
+   {
+    OSSignalBinSem(CHECK_ERROR_P); 
+    return 0;
+   }
+   else
+    return 1; 
+}
+
+/*************************************************************************************
+ * Function:        Update_time
+ *
+ * PreCondition:    None
+ *
+ * Input:           Pointers to the variables that make up real time H:M:S
+ *                  set_time, pointer indicating that there has been a new
+ *                  real time measurement 
+ *
+ * Output:          Float containing total elapsed time recorded by the system timer
+ *
+ * Side Effects:    Modifies the data pointed to by input pointers 
+ *        
+ * Overview:        Creates a real time clock using system resources. If there is no
+ *                  GPS available (ie if all are 0, meaning an empty string) then 
+ *                  behavior is simply a rolling counter
+ *                  If there has been a new real time measurement then the log time is 
+ *                  set to real time
+ *                  If there has been no new measurement then the system functions like
+ *                  a rolling counter
+ *
+ *                  Always returns the total elapsed time according to the system timer 
+ *                  
+ *
+ * Note:            
+*************************************************************************************/
+float update_time(uint8_t * H, uint8_t * M, float * S, uint8_t * set_time) 
+{
+  float update = (data.tick_counter - data.last_tick) * SYSTEM_TIMER_PERIOD * 0.000001; 
+
+ // Case no GPS signal this breaks if it is exactly midnight
+ if ((data.hours == 0) && (data.mins ==0) && (data.secs==0))
+  {
+    // Avoid over-writing previous timestamp with bad data
+    *S = *S + update; 
+
+      if( (*S) >= 60)
+        {
+        *S = *S-60; 
+        *M = *M + 1; 
+        }
+      if ( *M ==  60 )
+        {
+        *M = 0 ;
+        *H = *H + 1;
+        }
+      if ( *H == 24)
+        {
+        *H = 0; 
+        }
+  }
+ else 
+  {
+    // Always reset hours and minutes to GPS
+    if (*set_time)
+      {
+      *H = data.hours; 
+      *M = data.mins; 
+      *S = data.secs;
+      *set_time = 0; 
+      }
+    else 
+    {
+      *S = *S+ update; 
+
+      if( (*S) >= 60)
+        {
+        *S = *S-60; 
+        *M = *M + 1; 
+        }
+      if ( *M ==  60 )
+        {
+        *M = 0 ;
+        *H = *H + 1;
+        }
+      if ( *H == 24)
+        {
+        *H = 0; 
+        }
+    }
+  }
+  data.last_tick = data.tick_counter; 
+  return  (float) ((float)data.tick_counter * SYSTEM_TIMER_PERIOD * 0.000001); 
+}
+
+
+
+
+
